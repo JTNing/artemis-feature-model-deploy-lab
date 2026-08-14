@@ -1,0 +1,7 @@
+---
+# Inert until artemislocal joins [artemistests_iris:children] (L7).
+# Deliberately iris-only: TUM's iris group file also bundles nebula and a
+# local-LLM flag; the lab does not reproduce that inventory quirk.
+iris:
+  url: "https://pyris.invalid"
+  secret: "{{ lab_iris_dummy_secret }}"

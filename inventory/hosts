@@ -1,0 +1,14 @@
+[artemislocal]
+192.168.252.2 ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_ed25519_artemis_vm
+
+[artemistests:children]
+artemislocal
+
+[artemistests_common_config:children]
+artemislocal
+
+[artemistests_mysql:children]
+artemislocal
+
+[artemistests_local_vc_ci:children]
+artemislocal

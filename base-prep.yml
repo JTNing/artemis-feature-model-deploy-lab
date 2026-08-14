@@ -1,0 +1,17 @@
+---
+- name: Prepare bare target for the Artemis collection
+  hosts: artemislocal
+  become: true
+
+  roles:
+    - role: geerlingguy.docker
+      vars:
+        docker_users:
+          - ubuntu
+
+  tasks:
+    - name: Install git
+      ansible.builtin.apt:
+        name: git
+        state: present
+        update_cache: true
