@@ -8,12 +8,16 @@
   + `artemistests_local_vc_ci.yml` + `artemistests_mysql.yml`), with YAML
   indentation lost in transit. Structure was therefore restored from the public
   originals, never from the sample text.
-- Consumer contract: `ls1intum/artemis-ansible-collection` @
-  `346e3b4ed563b27aefe880b92e7926f24a612a12` (installed from the `JTNing` fork,
-  identical commit). Template-guard behavior referenced below was verified on
-  that commit: every dropped block is presence-guarded (dropping it removes the
-  rendered keys entirely); the two `INFO_OPERATOR*` lines are **unguarded** and
-  therefore mandatory.
+- Consumer contract: `ls1intum/artemis-ansible-collection`, pinned via the
+  `JTNing` fork. Baseline pin `346e3b4ed563b27aefe880b92e7926f24a612a12`
+  (2026-08-03); bumped 2026-08-15 to
+  `8977303c560a91be27214509dd07bf6170c97277` during the build-agent-password
+  incident (see §10 and `incident-2026-08-15-build-agent-git-password.md`).
+  Template-guard behavior referenced below was verified on the baseline pin:
+  dropped blocks are presence-guarded (dropping removes the rendered keys) —
+  with one verified exception, `push_notification_relay`, which carries a
+  collection default and needs an explicit null (NULL-OVERRIDE); the two
+  `INFO_OPERATOR*` lines are **unguarded** and therefore mandatory.
 - Purpose. This table is simultaneously:
   1. evidence of the **variable-ownership classification** (which values belong
      to the variant, the host identity, the admin, or a deployment topology);
@@ -31,6 +35,7 @@
 | DROP-MULTINODE | Removed: multinode-only; first target is single-node |
 | DROP-MINIMAL | Removed: presence-gated feature/integration block not selected in the minimal variant (removal = rendered keys absent, guard verified) |
 | DROP-UNUSED | Removed: not consumed by the `artemis-tests` playbook / docker path |
+| NULL-OVERRIDE | Explicit null needed to defeat a collection-default fallback (the guard accepts `is not none`, but plain removal resurrects the default) |
 | LAB-ADD | Added by the lab, no sample counterpart |
 
 ## 1. Per-server section (sample lines 1–19, from `artemistest7.yml`)
@@ -63,7 +68,7 @@
 | `artemis_passkey_enabled: true` | KEEP | 〃 | Parity. Passkey UI may not function behind a self-signed cert (WebAuthn secure-context rules) — out of scope, login by password unaffected |
 | `artemis_repo_basepath: "/opt/artemis/data"` | KEEP | 〃 | — |
 | `artemis_tmp_directory: "/tmp"` | KEEP | 〃 | — |
-| `push_notification_relay: hermes-staging…` | DROP-MINIMAL | — | Presence-gated Hermes integration (guard verified) |
+| `push_notification_relay: hermes-staging…` | NULL-OVERRIDE | `artemistests_common_config.yml` (explicit null) | Guarded, but the collection **defaults** it to hermes-**prod** — plain removal resurrected the default in the L3 render; explicit null is the off-switch |
 | `tum_live_base_url: https://tum.live/api/v2` | DROP-MINIMAL | — | Presence-gated TUM-Live integration (guard verified) |
 | `artemis_ssh_key_password:` (null) | KEEP | `artemistests_common_config.yml` | LocalVC key-generation contract (quartet kept verbatim) |
 | `artemis_ssh_key_path:` (null here; localvc group sets `/tmp`) | KEEP | 〃 | — |
@@ -150,10 +155,19 @@
 | DROP-MINIMAL | **Feature-gated blocks**: emitted if and only if the corresponding feature is selected; absence is the off-switch (presence-gating + merge semantics) |
 | DROP-MULTINODE | Out of scope for the single-node mode; a future multinode mode owns them |
 | DROP-UNUSED | Not consumed on this path; emitting them would be dead config (catalog records per-template applicability) |
+| NULL-OVERRIDE | For deselected features whose variable carries a collection default, the composer must emit an **explicit null** — absence is not the off-switch there. Requires the catalog's default-provenance field |
 | LAB-ADD | Lab-only scaffolding, except `artemis_telemetry_enabled: false`, which the composer should offer as an explicit choice |
+
+## 10. Post-baseline deltas (2026-08-15, L4 incident)
+
+| Entry | Disposition | Lab location | Reason |
+|---|---|---|---|
+| Collection pin `346e3b4` → `8977303` | PIN-BUMP | `requirements.yml` | Companion state for deploying newest `develop`: removes the legacy `ARTEMIS_VERSIONCONTROL_USER/PASSWORD` emission (PR #234), adds inert presence-gated OIDC blocks and docker permission fixes; delta reviewed and archived in the incident report |
+| `version_control.localvc.build_agent_git_credentials:` (user + password) | DUMMY | `artemistests_local_vc_ci.yml` + `artemislocal/secrets.yml` (`lab_build_agent_git_password`) | Required by the new `BuildAgentGitPasswordValidator` on `develop` (prod profile; SSH does **not** exempt); overrides the image-shipped example `buildjob_password`. In a real package: Vault reference |
 
 ## Tally
 
-KEEP 27 · DUMMY 3 · IDENTITY 9 · DROP-MULTINODE 8 · DROP-MINIMAL 12 ·
-DROP-UNUSED 2 · LAB-ADD 5 (incl. two inert files) — every line of the sample
-is accounted for.
+KEEP 27 · DUMMY 4 · IDENTITY 9 · DROP-MULTINODE 8 · DROP-MINIMAL 11 ·
+NULL-OVERRIDE 1 · DROP-UNUSED 2 · LAB-ADD 5 (incl. two inert files) ·
+PIN-BUMP 1 — every line of the sample plus the post-baseline deltas is
+accounted for.

@@ -10,5 +10,10 @@ artemislocal
 [artemistests_mysql:children]
 artemislocal
 
+[artemistests_postgres:children]
+
+
 [artemistests_local_vc_ci:children]
 artemislocal
+
+[artemistests_iris:children]

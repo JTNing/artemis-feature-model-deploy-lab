@@ -36,3 +36,5 @@ artemis_create_deployment_user: false
 
 proxy_ssl_certificate_path: "/opt/lab-certs/fullchain.pem"
 proxy_ssl_certificate_key_path: "/opt/lab-certs/privkey.pem"
+
+push_notification_relay:

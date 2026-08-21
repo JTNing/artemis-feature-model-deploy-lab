@@ -1,8 +1,9 @@
 secrets/
 evidence/*
-!evidence/transformation-table.md
+!evidence/*.md
 checkouts/
 .venv/
 .idea/
 .DS_Store
 inventory/group_vars/artemislocal/secrets.yml
+.docs/

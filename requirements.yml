@@ -5,4 +5,4 @@ roles:
 collections:
   - name: https://github.com/JTNing/artemis-ansible-collection.git
     type: git
-    version: 346e3b4ed563b27aefe880b92e7926f24a612a12
+    version: 8977303c560a91be27214509dd07bf6170c97277
