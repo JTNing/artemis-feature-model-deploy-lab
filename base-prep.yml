@@ -10,8 +10,10 @@
           - ubuntu
 
   tasks:
-    - name: Install git
+    - name: Install git and acl
       ansible.builtin.apt:
-        name: git
+        name:
+          - git
+          - acl
         state: present
         update_cache: true
