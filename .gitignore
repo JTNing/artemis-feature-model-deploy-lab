@@ -7,3 +7,4 @@ checkouts/
 .DS_Store
 inventory/group_vars/artemislocal/secrets.yml
 .docs/
+evidence/composer-closing-validation-2026-08-22.md
