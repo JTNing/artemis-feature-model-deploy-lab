@@ -1,0 +1,16 @@
+[artemisremote]
+
+[artemistests:children]
+artemisremote
+
+[artemistests_common_config:children]
+artemisremote
+
+[artemistests_mysql:children]
+artemisremote
+
+[artemistests_local_vc_ci:children]
+artemisremote
+
+[artemistests_without_atlas:children]
+artemisremote
