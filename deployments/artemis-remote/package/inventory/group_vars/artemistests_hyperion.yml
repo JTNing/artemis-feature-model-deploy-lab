@@ -1,0 +1,9 @@
+---
+artemis_hyperion_enabled: true
+
+spring_ai:
+  azure_openai:
+    api_key: "{{ lookup('ansible.builtin.env', 'AZURE_OPENAI_API_KEY') }}"
+    endpoint: "{{ lookup('ansible.builtin.env', 'AZURE_OPENAI_ENDPOINT') }}"
+    deployment_name: "{{ lookup('ansible.builtin.env', 'AZURE_OPENAI_DEPLOYMENT_NAME') }}"
+    temperature: 1.0

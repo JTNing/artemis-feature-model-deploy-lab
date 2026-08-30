@@ -12,11 +12,29 @@ artemisremote
 [artemistests_local_vc_ci:children]
 artemisremote
 
+[artemistests_without_lecture:children]
+artemisremote
+
 [artemistests_without_tutorialgroup:children]
+artemisremote
+
+[artemistests_without_modeling:children]
+artemisremote
+
+[artemistests_without_fileupload:children]
 artemisremote
 
 [artemistests_without_exam:children]
 artemisremote
 
-[artemistests_without_atlas:children]
+[artemistests_without_plagiarism:children]
+artemisremote
+
+[artemistests_athena:children]
+artemisremote
+
+[artemistests_iris:children]
+artemisremote
+
+[artemistests_hyperion:children]
 artemisremote

@@ -3,7 +3,7 @@
   "bindingsResolved" : [ {
     "featureId" : "lecture",
     "classification" : "bound",
-    "selected" : true
+    "selected" : false
   }, {
     "featureId" : "tutorialgroup",
     "classification" : "bound",
@@ -35,11 +35,11 @@
   }, {
     "featureId" : "modeling",
     "classification" : "bound",
-    "selected" : true
+    "selected" : false
   }, {
     "featureId" : "file-upload",
     "classification" : "bound",
-    "selected" : true
+    "selected" : false
   }, {
     "featureId" : "exam",
     "classification" : "bound",
@@ -47,23 +47,23 @@
   }, {
     "featureId" : "plagiarism",
     "classification" : "bound",
-    "selected" : true
+    "selected" : false
   }, {
     "featureId" : "athena",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "atlas",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "iris",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "hyperion",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "lti",
     "classification" : "bound",
@@ -102,7 +102,7 @@
     "selected" : true
   } ],
   "valuesGenerated" : "pass",
-  "requiredEnvironmentVariables" : [ "ARTEMIS_DATABASE_PASSWORD", "ARTEMIS_EMAIL_TEST", "ARTEMIS_INTERNAL_ADMIN_PASSWORD", "ARTEMIS_JHIPSTER_JWT", "ARTEMIS_OPERATOR_ADMIN_NAME", "ARTEMIS_OPERATOR_NAME", "PROXY_SSL_CERTIFICATE_KEY_PATH", "PROXY_SSL_CERTIFICATE_PATH", "SERVER_HOSTNAME", "TESTSERVER_NAME" ],
+  "requiredEnvironmentVariables" : [ "ARTEMIS_DATABASE_PASSWORD", "ARTEMIS_EMAIL_TEST", "ARTEMIS_INTERNAL_ADMIN_PASSWORD", "ARTEMIS_JHIPSTER_JWT", "ARTEMIS_OPERATOR_ADMIN_NAME", "ARTEMIS_OPERATOR_NAME", "ATHENA_SECRET", "ATHENA_URL", "AZURE_OPENAI_API_KEY", "AZURE_OPENAI_DEPLOYMENT_NAME", "AZURE_OPENAI_ENDPOINT", "IRIS_SECRET", "IRIS_URL", "PROXY_SSL_CERTIFICATE_KEY_PATH", "PROXY_SSL_CERTIFICATE_PATH", "SERVER_HOSTNAME", "TESTSERVER_NAME" ],
   "secretsAsReferences" : "pass",
   "syntaxValidated" : "pending",
   "model" : {
