@@ -6,9 +6,6 @@
     "id" : "lecture",
     "name" : "Lectures"
   }, {
-    "id" : "tutorialgroup",
-    "name" : "Tutorial Groups"
-  }, {
     "id" : "course-workflow",
     "name" : "Course Workflow"
   }, {
@@ -32,9 +29,6 @@
   }, {
     "id" : "file-upload",
     "name" : "File Upload Exercises"
-  }, {
-    "id" : "exam",
-    "name" : "Exam Mode"
   }, {
     "id" : "plagiarism",
     "name" : "Plagiarism Detection"
