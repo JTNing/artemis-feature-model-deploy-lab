@@ -1,4 +1,0 @@
----
-iris:
-  url: "{{ lookup('ansible.builtin.env', 'IRIS_URL') }}"
-  secret: "{{ lookup('ansible.builtin.env', 'IRIS_SECRET') }}"

@@ -18,23 +18,8 @@
     "id" : "quiz",
     "name" : "Quiz Exercises"
   }, {
-    "id" : "text",
-    "name" : "Text Exercises"
-  }, {
-    "id" : "athena",
-    "name" : "Athena (AI Assessment)"
-  }, {
-    "id" : "atlas",
-    "name" : "Atlas (Adaptive Learning)"
-  }, {
-    "id" : "iris",
-    "name" : "Iris (AI Assistant)"
-  }, {
-    "id" : "hyperion",
-    "name" : "Hyperion (Exercise Creation)"
-  }, {
-    "id" : "mysql",
-    "name" : "MySQL"
+    "id" : "postgresql",
+    "name" : "PostgreSQL"
   }, {
     "id" : "integrated-code-lifecycle",
     "name" : "Integrated Code Lifecycle"

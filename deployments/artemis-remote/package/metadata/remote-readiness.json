@@ -31,7 +31,7 @@
   }, {
     "featureId" : "text",
     "classification" : "bound",
-    "selected" : true
+    "selected" : false
   }, {
     "featureId" : "modeling",
     "classification" : "bound",
@@ -51,19 +51,19 @@
   }, {
     "featureId" : "athena",
     "classification" : "bound",
-    "selected" : true
+    "selected" : false
   }, {
     "featureId" : "atlas",
     "classification" : "bound",
-    "selected" : true
+    "selected" : false
   }, {
     "featureId" : "iris",
     "classification" : "bound",
-    "selected" : true
+    "selected" : false
   }, {
     "featureId" : "hyperion",
     "classification" : "bound",
-    "selected" : true
+    "selected" : false
   }, {
     "featureId" : "lti",
     "classification" : "bound",
@@ -83,11 +83,11 @@
   }, {
     "featureId" : "mysql",
     "classification" : "bound",
-    "selected" : true
+    "selected" : false
   }, {
     "featureId" : "postgresql",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "integrated-code-lifecycle",
     "classification" : "bound",
@@ -102,7 +102,7 @@
     "selected" : true
   } ],
   "valuesGenerated" : "pass",
-  "requiredEnvironmentVariables" : [ "ARTEMIS_DATABASE_PASSWORD", "ARTEMIS_EMAIL_TEST", "ARTEMIS_INTERNAL_ADMIN_PASSWORD", "ARTEMIS_JHIPSTER_JWT", "ARTEMIS_OPERATOR_ADMIN_NAME", "ARTEMIS_OPERATOR_NAME", "ATHENA_SECRET", "ATHENA_URL", "AZURE_OPENAI_API_KEY", "AZURE_OPENAI_DEPLOYMENT_NAME", "AZURE_OPENAI_ENDPOINT", "IRIS_SECRET", "IRIS_URL", "PROXY_SSL_CERTIFICATE_KEY_PATH", "PROXY_SSL_CERTIFICATE_PATH", "SERVER_HOSTNAME", "TESTSERVER_NAME" ],
+  "requiredEnvironmentVariables" : [ "ARTEMIS_DATABASE_PASSWORD", "ARTEMIS_EMAIL_TEST", "ARTEMIS_INTERNAL_ADMIN_PASSWORD", "ARTEMIS_JHIPSTER_JWT", "ARTEMIS_OPERATOR_ADMIN_NAME", "ARTEMIS_OPERATOR_NAME", "PROXY_SSL_CERTIFICATE_KEY_PATH", "PROXY_SSL_CERTIFICATE_PATH", "SERVER_HOSTNAME", "TESTSERVER_NAME" ],
   "secretsAsReferences" : "pass",
   "syntaxValidated" : "pending",
   "model" : {

@@ -6,7 +6,7 @@ artemisremote
 [artemistests_common_config:children]
 artemisremote
 
-[artemistests_mysql:children]
+[artemistests_postgres:children]
 artemisremote
 
 [artemistests_local_vc_ci:children]
@@ -16,6 +16,9 @@ artemisremote
 artemisremote
 
 [artemistests_without_tutorialgroup:children]
+artemisremote
+
+[artemistests_without_text:children]
 artemisremote
 
 [artemistests_without_modeling:children]
@@ -30,11 +33,5 @@ artemisremote
 [artemistests_without_plagiarism:children]
 artemisremote
 
-[artemistests_athena:children]
-artemisremote
-
-[artemistests_iris:children]
-artemisremote
-
-[artemistests_hyperion:children]
+[artemistests_without_atlas:children]
 artemisremote

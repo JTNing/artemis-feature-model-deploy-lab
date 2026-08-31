@@ -48,39 +48,4 @@
   "consumer" : "proxy_ssl_certificate_key_path",
   "file" : "inventory/group_vars/artemistests_common_config.yml",
   "kind" : "identity"
-}, {
-  "envVar" : "ATHENA_URL",
-  "consumer" : "athena.url",
-  "file" : "inventory/group_vars/artemistests_athena.yml",
-  "kind" : "secret"
-}, {
-  "envVar" : "ATHENA_SECRET",
-  "consumer" : "athena.secret",
-  "file" : "inventory/group_vars/artemistests_athena.yml",
-  "kind" : "secret"
-}, {
-  "envVar" : "IRIS_URL",
-  "consumer" : "iris.url",
-  "file" : "inventory/group_vars/artemistests_iris.yml",
-  "kind" : "secret"
-}, {
-  "envVar" : "IRIS_SECRET",
-  "consumer" : "iris.secret",
-  "file" : "inventory/group_vars/artemistests_iris.yml",
-  "kind" : "secret"
-}, {
-  "envVar" : "AZURE_OPENAI_API_KEY",
-  "consumer" : "spring_ai.azure_openai.api_key",
-  "file" : "inventory/group_vars/artemistests_hyperion.yml",
-  "kind" : "secret"
-}, {
-  "envVar" : "AZURE_OPENAI_ENDPOINT",
-  "consumer" : "spring_ai.azure_openai.endpoint",
-  "file" : "inventory/group_vars/artemistests_hyperion.yml",
-  "kind" : "secret"
-}, {
-  "envVar" : "AZURE_OPENAI_DEPLOYMENT_NAME",
-  "consumer" : "spring_ai.azure_openai.deployment_name",
-  "file" : "inventory/group_vars/artemistests_hyperion.yml",
-  "kind" : "secret"
 } ]

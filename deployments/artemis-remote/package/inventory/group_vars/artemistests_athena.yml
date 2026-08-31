@@ -1,4 +1,0 @@
----
-athena:
-  url: "{{ lookup('ansible.builtin.env', 'ATHENA_URL') }}"
-  secret: "{{ lookup('ansible.builtin.env', 'ATHENA_SECRET') }}"
