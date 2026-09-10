@@ -55,7 +55,7 @@
   }, {
     "featureId" : "atlas",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "iris",
     "classification" : "bound",

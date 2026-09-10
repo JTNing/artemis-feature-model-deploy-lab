@@ -11,6 +11,3 @@ artemisremote
 
 [artemistests_local_vc_ci:children]
 artemisremote
-
-[artemistests_without_atlas:children]
-artemisremote

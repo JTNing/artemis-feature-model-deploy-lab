@@ -39,6 +39,9 @@
     "id" : "plagiarism",
     "name" : "Plagiarism Detection"
   }, {
+    "id" : "atlas",
+    "name" : "Atlas (Adaptive Learning)"
+  }, {
     "id" : "postgresql",
     "name" : "PostgreSQL"
   }, {
