@@ -1,8 +1,14 @@
 {
   "modelId" : "artemis-generated-feature-model",
-  "modelVersion" : "0.1.0+80619be59194",
+  "modelVersion" : "0.1.0+3ef9968d9af6",
   "mode" : "DEMO",
   "selectedFeatures" : [ {
+    "id" : "lecture",
+    "name" : "Lectures"
+  }, {
+    "id" : "tutorialgroup",
+    "name" : "Tutorial Groups"
+  }, {
     "id" : "course-workflow",
     "name" : "Course Workflow"
   }, {
@@ -17,6 +23,21 @@
   }, {
     "id" : "quiz",
     "name" : "Quiz Exercises"
+  }, {
+    "id" : "text",
+    "name" : "Text Exercises"
+  }, {
+    "id" : "modeling",
+    "name" : "Modeling Exercises"
+  }, {
+    "id" : "file-upload",
+    "name" : "File Upload Exercises"
+  }, {
+    "id" : "exam",
+    "name" : "Exam Mode"
+  }, {
+    "id" : "plagiarism",
+    "name" : "Plagiarism Detection"
   }, {
     "id" : "postgresql",
     "name" : "PostgreSQL"

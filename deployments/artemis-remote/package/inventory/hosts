@@ -12,26 +12,5 @@ artemisremote
 [artemistests_local_vc_ci:children]
 artemisremote
 
-[artemistests_without_lecture:children]
-artemisremote
-
-[artemistests_without_tutorialgroup:children]
-artemisremote
-
-[artemistests_without_text:children]
-artemisremote
-
-[artemistests_without_modeling:children]
-artemisremote
-
-[artemistests_without_fileupload:children]
-artemisremote
-
-[artemistests_without_exam:children]
-artemisremote
-
-[artemistests_without_plagiarism:children]
-artemisremote
-
 [artemistests_without_atlas:children]
 artemisremote

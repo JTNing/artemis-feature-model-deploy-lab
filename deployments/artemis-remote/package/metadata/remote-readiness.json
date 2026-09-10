@@ -3,11 +3,11 @@
   "bindingsResolved" : [ {
     "featureId" : "lecture",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "tutorialgroup",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "course-workflow",
     "classification" : "no-op",
@@ -31,23 +31,23 @@
   }, {
     "featureId" : "text",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "modeling",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "file-upload",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "exam",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "plagiarism",
     "classification" : "bound",
-    "selected" : false
+    "selected" : true
   }, {
     "featureId" : "athena",
     "classification" : "bound",
@@ -62,6 +62,10 @@
     "selected" : false
   }, {
     "featureId" : "hyperion",
+    "classification" : "bound",
+    "selected" : false
+  }, {
+    "featureId" : "deimos",
     "classification" : "bound",
     "selected" : false
   }, {
@@ -82,7 +86,7 @@
     "selected" : false
   }, {
     "featureId" : "mysql",
-    "classification" : "bound",
+    "classification" : "unsupported",
     "selected" : false
   }, {
     "featureId" : "postgresql",
@@ -107,10 +111,10 @@
   "syntaxValidated" : "pending",
   "model" : {
     "id" : "artemis-generated-feature-model",
-    "version" : "0.1.0+80619be59194"
+    "version" : "0.1.0+3ef9968d9af6"
   },
   "bindingCatalog" : {
-    "catalogVersion" : 2,
-    "collectionPin" : "fce6ad19a7ee58dbecc5632d5bb2b3f18f76886e"
+    "catalogVersion" : 4,
+    "collectionPin" : "13e50a20fea641a5a792e42541952a37cd7f1239"
   }
 }
